@@ -36,10 +36,8 @@ extension ReminderListViewController {
         var contentConfiguration = cell.defaultContentConfiguration()
         contentConfiguration.text = reminder.title
         contentConfiguration.secondaryText = reminder.dueDate.dayAndTimeText
-        contentConfiguration.secondaryTextProperties.font = UIFont.preferredFont(
-            forTextStyle: .caption1)
+        contentConfiguration.secondaryTextProperties.font = UIFont.preferredFont(forTextStyle: .caption1)
         cell.contentConfiguration = contentConfiguration
-
 
         var doneButtonConfiguration = doneButtonConfiguration(for: reminder)
         doneButtonConfiguration.tintColor = .todayListCellDoneButtonTint
@@ -48,7 +46,6 @@ extension ReminderListViewController {
         cell.accessories = [
             .customView(configuration: doneButtonConfiguration), .disclosureIndicator(displayed: .always)
         ]
-
 
         var backgroundConfiguration = UIBackgroundConfiguration.listCell()
         backgroundConfiguration.backgroundColor = .todayListCellBackground

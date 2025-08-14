@@ -12,8 +12,6 @@ class ReminderViewController: UICollectionViewController {
     private typealias DataSource = UICollectionViewDiffableDataSource<Section, Row>
     private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Row>
 
-
-    var reminder: Reminder
     var workingReminder: Reminder
     var onChange: (Reminder) -> Void
     private var dataSource: DataSource?
